@@ -1,0 +1,16 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{21A1DB4F-4773-0E74-79B3-018EDF536477}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "TestGame",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	]
+}
