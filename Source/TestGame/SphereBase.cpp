@@ -58,51 +58,29 @@ void ASphereBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
 void ASphereBase::MoveForward(float val)
 {
-	
+	// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::SanitizeFloat(val));
 	if (IsInput) 
 	{
 		AngularVector.Y = SphereSpeed * val;
-		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, "go up/down");
-		if (SphereSpeed == 200.0) {
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, "Speed: 200");
-		}
-		else if (SphereSpeed == 350.0) {
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, "Speed: 350");
-		}
-		else {
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, "Speed: changing");
-		}
 	}
 
 }
 
 void ASphereBase::MoveRight(float val)
 {
-	
+	// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::SanitizeFloat(val));
 	if (IsInput)
 	{
 		AngularVector.X = SphereSpeed * val;
-		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, "go right/left");
-		if (SphereSpeed == 200.0) {
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, "Speed: 200");
-		}
-		else if (SphereSpeed == 350.0) {
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, "Speed: 350");
-		}
-		else {
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::White, "Speed: changing");
-		}
 	}
 }
 
 void ASphereBase::SpeedUp()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red,"Speed up");
 	SphereSpeed = SpeedMax;
 }
 
 void ASphereBase::SpeedLow()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, "Speed down");
 	SphereSpeed = SpeedMin;
 }
