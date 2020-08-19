@@ -32,9 +32,6 @@ void ATestGameGameModeBase::Tick(float DeltaTime)
 
 void ATestGameGameModeBase::SetPlayerLocation()
 {
-	PlayPawn->SetActorLocation(CurrentStart);
-	PlayPawn->SphereMeshComp->SetPhysicsLinearVelocity(FVector(0, 0, 0));
-	PlayPawn->SphereMeshComp->SetPhysicsAngularVelocity(FVector(0, 0, 0));
 }
 
 void ATestGameGameModeBase::SetPlayerLocation(FVector Start)

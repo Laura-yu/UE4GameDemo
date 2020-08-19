@@ -14,7 +14,6 @@ AHitBoxBase::AHitBoxBase()
 
 	//BaseScene = CreateDefaultSubobject<USceneComponent>(TEXT("SceneBase"));
 
-	HitBoxComp = CreateDefaultSubobject<UBoxComponent>(TEXT("HitBox"));
 	HitBoxComp->OnComponentBeginOverlap.AddDynamic(this, &AHitBoxBase::BeginHit);
 	//HitBoxComp->SetupAttachment(BaseScene);
 }
